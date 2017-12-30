@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="http://oog4yfyu0.bkt.clouddn.com/echarts.min.js"></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/wordcloud.js"></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/anhui.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/aomen.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/beijing.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/chongqing.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/fujian.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/gansu.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guangdong.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guangxi.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guizhou.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hainan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hebei.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/heilongjiang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/henan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hubei.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hunan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/jiangsu.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/jiangxi.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/jilin.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/liaoning.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/neimenggu.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/ningxia.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/qinghai.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/shangdong.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/shanghai.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/shanxi.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/sichuan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/taiwan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/tianjin.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/xianggang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/xinjiang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/xizang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/yunnan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/zhejiang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guangdong.js "></script>
+    <script type="text/javascript " src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM "></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js "></script>
+</head>
+
+<body>
+    <div id="main" style="width: 800px;height:400px;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {
+    "legend": [
+        {
+            "data": [
+                "最高气温",
+                "最低气温"
+            ],
+            "top": "top",
+            "left": "center",
+            "selectedMode": true,
+            "orient": "horizontal",
+            "show": true
+        }
+    ],
+    "title": [
+        {
+            "textStyle": {
+                "color": "#000",
+                "fontSize": 18
+            },
+            "text": "折线图示例",
+            "top": "auto",
+            "left": "auto",
+            "subtextStyle": {
+                "color": "#aaa",
+                "fontSize": 12
+            },
+            "subtext": ""
+        }
+    ],
+    "_index_flag": 1446328,
+    "xAxis": [
+        {
+            "nameGap": 25,
+            "data": [
+                "周一",
+                "周二",
+                "周三",
+                "周四",
+                "周五",
+                "周六",
+                "周日"
+            ],
+            "nameLocation": "middle",
+            "name": "",
+            "axisLabel": {
+                "interval": "auto"
+            },
+            "type": "category",
+            "nameTextStyle": {
+                "fontSize": 14
+            }
+        }
+    ],
+    "series": [
+        {
+            "markLine": {
+                "data": [
+                    {
+                        "name": "平均値",
+                        "type": "average"
+                    }
+                ]
+            },
+            "smooth": false,
+            "data": [
+                11,
+                11,
+                15,
+                13,
+                12,
+                13,
+                10
+            ],
+            "symbol": "emptyCircle",
+            "type": "line",
+            "indexflag": 1446328,
+            "areaStyle": {},
+            "lineStyle": {
+                "normal": {
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid",
+                    "width": 1
+                }
+            },
+            "markPoint": {
+                "data": [
+                    {
+                        "label": {
+                            "normal": {
+                                "textStyle": {
+                                    "color": "#fff"
+                                }
+                            }
+                        },
+                        "symbol": "pin",
+                        "name": "最大值",
+                        "type": "max",
+                        "symbolSize": 50
+                    },
+                    {
+                        "label": {
+                            "normal": {
+                                "textStyle": {
+                                    "color": "#fff"
+                                }
+                            }
+                        },
+                        "symbol": "pin",
+                        "name": "最小值",
+                        "type": "min",
+                        "symbolSize": 50
+                    }
+                ]
+            },
+            "step": false,
+            "showSymbol": true,
+            "name": "最高气温",
+            "stack": "",
+            "label": {
+                "normal": {
+                    "textStyle": {
+                        "color": "#000",
+                        "fontSize": 12
+                    },
+                    "position": "top",
+                    "formatter": null,
+                    "show": false
+                },
+                "emphasis": {
+                    "show": true
+                }
+            }
+        },
+        {
+            "markLine": {
+                "data": [
+                    {
+                        "name": "平均値",
+                        "type": "average"
+                    }
+                ]
+            },
+            "smooth": false,
+            "data": [
+                1,
+                -2,
+                2,
+                5,
+                3,
+                2,
+                0
+            ],
+            "symbol": "emptyCircle",
+            "type": "line",
+            "indexflag": 1446328,
+            "areaStyle": {},
+            "lineStyle": {
+                "normal": {
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid",
+                    "width": 1
+                }
+            },
+            "markPoint": {
+                "data": [
+                    {
+                        "label": {
+                            "normal": {
+                                "textStyle": {
+                                    "color": "#fff"
+                                }
+                            }
+                        },
+                        "symbol": "pin",
+                        "name": "最大值",
+                        "type": "max",
+                        "symbolSize": 50
+                    },
+                    {
+                        "label": {
+                            "normal": {
+                                "textStyle": {
+                                    "color": "#fff"
+                                }
+                            }
+                        },
+                        "symbol": "pin",
+                        "name": "最小值",
+                        "type": "min",
+                        "symbolSize": 50
+                    }
+                ]
+            },
+            "step": false,
+            "showSymbol": true,
+            "name": "最低气温",
+            "stack": "",
+            "label": {
+                "normal": {
+                    "textStyle": {
+                        "color": "#000",
+                        "fontSize": 12
+                    },
+                    "position": "top",
+                    "formatter": null,
+                    "show": false
+                },
+                "emphasis": {
+                    "show": true
+                }
+            }
+        }
+    ],
+    "backgroundColor": "#fff",
+    "yAxis": [
+        {
+            "nameGap": 25,
+            "nameLocation": "middle",
+            "name": "",
+            "axisLabel": {
+                "formatter": "{value} °C"
+            },
+            "type": "value",
+            "nameTextStyle": {
+                "fontSize": 14
+            }
+        }
+    ],
+    "toolbox": {
+        "feature": {
+            "saveAsImage": {
+                "show": true
+            }
+        },
+        "left": "right",
+        "top": "center",
+        "orient": "vertical",
+        "show": true
+    },
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597",
+        "#f6f5ec"
+    ],
+    "tooltip": {}
+};
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>

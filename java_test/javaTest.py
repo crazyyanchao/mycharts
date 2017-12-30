@@ -1,0 +1,1 @@
+print("----java_test-----\n"+"  hello world!")
