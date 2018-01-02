@@ -1,6 +1,11 @@
-temp    =   input('输入数字')
+# temp    =   input('输入数字')
+#
+# guess   =   innt('输入的数字')
+#
+# if guess==8:
+#     print(guess)
 
-guess   =   innt('输入的数字')
+import keyword
 
-if guess==8:
-    print(guess)
+# 打印Python保留字
+print(keyword.kwlist)
