@@ -1,6 +1,5 @@
 """
-@FILE_NAME: currency_converter_v1.0.py
-@Description: TODO(Describe the role of this Python file)
+@Description: TODO(汇率计算)
 @author YanchaoMa yanchaoma@foxmail.com
 @date  2017/12/6 23:51
  

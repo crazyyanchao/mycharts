@@ -1,10 +1,7 @@
 """
-@FILE_NAME: currency_converter_v2.0.py
-@Description: TODO(Describe the role of this Python file)
+@Description: TODO(新增功能：根据输入判断是人民币还是美元，进行相应的转换计算)
 @author YanchaoMa yanchaoma@foxmail.com
 @date  2018/01/02
-新增功能：根据输入判断是人民币还是美元，进行相应的转换计算
- 
 """
 # RATE
 USD_VS_RMB = 6.77
